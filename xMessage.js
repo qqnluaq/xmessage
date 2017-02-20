@@ -1,4 +1,4 @@
-$( function () {
+( function () {
 
     function xMessage( target, option ) {
         var self = this;
@@ -11,6 +11,9 @@ $( function () {
         }, option );
     }
 
+    if ( !window.xMessage )
+        window.xMessage = xMessage;
+        
     xMessage.prototype.listener = function( listener, option ) {
         var self = this;
 
